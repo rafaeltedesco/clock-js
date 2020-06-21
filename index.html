@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body>
+        <div class="container">
+            <header class="informative">
+                <h1>What time is it?</h1>
+            </header>
+            <main>
+                <div class="main-clock">
+                    <div class="time-box">
+                        <div class="inner-info">
+                            <div class="title">
+                                <p>
+                                    Hour
+                                </p>
+                            </div>
+                            <div class="time">
+                                <h3 id="hours">00</h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="time-box">
+                        <div class="inner-info">
+                            <div class="title">
+                                <p>Minutes</p>
+                            </div>
+                            <div class="time">
+                                <h3 id="minutes">
+                                    00
+                                </h3>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="time-box">
+                        <div class="inner-info">
+                            <div class="title">
+                                <p>Seconds</p>
+                            </div>
+                            <div class="time">
+                                <h3 id="seconds">00</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="controller-clock">
+                    <div class="control-btn">
+                        <button id="pause" class="btn">Pause</button>
+                        <button id="resume" class="btn" disabled>Resume</button>
+                    </div>
+                </div>
+            </main>
+            <footer>
+                <h5>Clock developed by Rafael Tedesco - &copy;2020 </h5>
+            </footer>
+            <script src="js/controller/clockController.js" async defer></script>
+            <script src="js/clock.js" async defer></script>
+        </div>
+    </body>
+</html>

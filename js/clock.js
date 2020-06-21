@@ -1,0 +1,1 @@
+window.timerCounter = new ClockController()
