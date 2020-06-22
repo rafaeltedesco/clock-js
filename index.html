@@ -13,55 +13,34 @@
     </head>
     <body>
         <div class="container">
-            <header class="informative">
+            <header>
                 <h1>What time is it?</h1>
             </header>
-            <main>
-                <div class="main-clock">
-                    <div class="time-box">
-                        <div class="inner-info">
-                            <div class="title">
-                                <p>
-                                    Hour
-                                </p>
-                            </div>
-                            <div class="time">
-                                <h3 id="hours">00</h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="time-box">
-                        <div class="inner-info">
-                            <div class="title">
-                                <p>Minutes</p>
-                            </div>
-                            <div class="time">
-                                <h3 id="minutes">
-                                    00
-                                </h3>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="time-box">
-                        <div class="inner-info">
-                            <div class="title">
-                                <p>Seconds</p>
-                            </div>
-                            <div class="time">
-                                <h3 id="seconds">00</h3>
-                            </div>
-                        </div>
-                    </div>
+            <section class="clock">
+                <div class="time-box">
+                    <p>Hours</p>
+                    <h3 id="hours">00</h3>
                 </div>
-                <div class="controller-clock">
-                    <div class="control-btn">
-                        <button id="pause" class="btn">Pause</button>
-                        <button id="resume" class="btn" disabled>Resume</button>
-                    </div>
+                <div class="time-box">
+                    <p>minutes</p>
+                    <h3 id="minutes">
+                        00
+                    </h3>
                 </div>
-            </main>
+                <div class="time-box">
+                    <p>seconds</p>
+                    <h3 id="seconds">00</h3>
+                </div>
+            </section>
+            <section class="button-controller">
+                <button id="resume" class="btn" disabled>Resume</button>
+                <button id="pause" class="btn">Pause</button>
+            </section>
+            <section class="messages">
+                <p id="message">Press Button Pause to Stop.</p>
+            </section>
             <footer>
-                <h5>Clock developed by Rafael Tedesco - &copy;2020 </h5>
+                <p>Clock developed by &copy;Rafael Tedesco - <span id="current_date"></span></p> 
             </footer>
             <script src="js/controller/clockController.js" async defer></script>
             <script src="js/clock.js" async defer></script>

@@ -1,22 +1,30 @@
 class ClockController {  
-    
+
     constructor() {
+        this._locale = 'pt-BR'
         this._hours = document.querySelector('#hours')
         this._minutes = document.querySelector('#minutes')
         this._seconds = document.querySelector('#seconds')   
         this._pauseBtn = document.querySelector('#pause')
         this._resumeBtn = document.querySelector('#resume')
+        this._currentDateSpan = document.querySelector('#current_date')
+        this._message = document.querySelector('#message')
         this._interval
         this.initialize()
         
     }
 
     initialize() {
+        this.setSpanCurrentDate()
         this.setClock()
         this.startClock()
         this.setEventPause()
         this.setEventResume()
 
+    }
+
+    get locale() {
+        return this._locale
     }
     
     setClock() {
@@ -41,6 +49,27 @@ class ClockController {
 
     get interval() {
         return this._interval
+    }
+
+    get message() {
+        return this._message
+    }
+
+    setMessage(message) {
+        this.message.innerHTML = message 
+    }
+
+    
+    get currentDateSpan() {
+        return this._currentDateSpan
+    }
+
+    setSpanCurrentDate() {
+        this.currentDateSpan.innerHTML = this.currentDate.toLocaleDateString(this.locale, {
+            day: '2-digit',
+            month: 'long',
+            year: 'numeric',
+        })
     }
 
     get hours() {
@@ -84,13 +113,17 @@ class ClockController {
         this.startClock()
         this.pauseBtn.disabled = false
         this.resumeBtn.disabled = true
-
+        this.setMessage('Press Button Pause to Stop.')
+        
     }
 
     pauseClickEvent() {
         clearInterval(this.interval)
         this.pauseBtn.disabled = true
         this.resumeBtn.disabled = false
+        this.setMessage('Press Button Resume to Continue.')
+        
+        
     }
 
     setEventPause() {
